@@ -1,0 +1,15 @@
+---
+title: "Part 3"
+author: "Susan He"
+---
+```{r}
+round(3.14159)
+round(3.14159, digits = 2)
+print(seq(1, 10, 2))
+print(rep(2, 5))
+```
+```{r}
+my_variable <- 12
+print(my_variable)
+```
+
