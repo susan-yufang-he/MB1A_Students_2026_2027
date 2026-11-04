@@ -1,0 +1,23 @@
+---
+title: "Practical_2_Data_Frames_and_Plots/prac2_exercises.qmd"
+author: "Susan"
+---
+
+Using the Pipe Symbol |> to pass the result from the left side into the first argument of the function on the right side
+```{r}
+input_vec <- c(5, -10, 4, -3)
+results <- input_vec |>
+  mean()|>
+  abs()|>
+  round()
+print(results)
+```
+
+```{r}
+y <- 12
+y == 7
+y < 15
+y > 20
+y <= 20
+```
+
