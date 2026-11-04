@@ -1,0 +1,23 @@
+---
+title: "Brain Data"
+author: "Susan He"
+---
+
+I'm calculating for the number of genes categorised as "regionally elevated" in the forebrain regions in humans, pigs, and mice.
+
+Starting with humans:
+```{r}
+sum(180,83,57,110)
+```
+
+Then, calculating for pigs:
+```{r}
+sum(109,157,31,45)
+```
+
+Finally, calculating for mice:
+```{r}
+sum(55,185,60,98)
+```
+
+Humans have the greatest number of genes classified as "regionally elevated."

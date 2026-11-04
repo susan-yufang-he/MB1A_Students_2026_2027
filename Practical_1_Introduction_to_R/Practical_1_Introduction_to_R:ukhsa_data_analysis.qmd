@@ -3,3 +3,64 @@ title: "Part 4"
 author: "Susan He"
 ---
 
+```{r}
+library(tidyverse)
+library(gt)
+install.packages("fortunes")
+library(fortunes)
+fortune()
+```
+```{r}
+cell_ID <- c("CX1","CX2")
+treated <- c(FALSE,TRUE)
+num_cells_before <- c(5415,8123)
+num_cells_after <- c(1432,7543)
+```
+
+
+```{r}
+my_first_vector <- c(1, 5, 9)
+print(my_first_vector)
+```
+```{r}
+nice_food <- c("cheese", "beans", "potatoes")
+
+print(nice_food[1])
+```
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+my_fav_pet <- all_my_pets[4]
+print(my_fav_pet)
+```
+```{r}
+my_data_frame <- tibble(
+  cell_ID = c("CX1","CX2"),
+  treated = c(FALSE,TRUE),
+  num_cells_before = c(5415,8123),
+  num_cells_after = c(1432,7543)
+)
+
+gt(my_data_frame)
+```
+```{r}
+```
+
+
+```{r}
+weather <- read_csv("data/weather_data.csv")
+```
+
+```{r}
+gt(weather)
+ggplot(weather)
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+))
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+)) +
+  geom_line()
+```
+

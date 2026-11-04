@@ -13,3 +13,18 @@ my_variable <- 12
 print(my_variable)
 ```
 
+```{r}
+print(class(my_variable))
+```
+
+```{r}
+cell_ID_1 <- "CX1"
+cell_ID_2 <- "CX2"
+treated_F <- FALSE
+treated_T <- TRUE
+num_cells_before_CX1 <- 5415
+num_cells_before_CX2 <- 8123
+num_cells_after_CX1 <- 1432
+num_cells_after_CX2 <- 7543
+```
+
