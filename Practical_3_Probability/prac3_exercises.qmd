@@ -1,0 +1,64 @@
+---
+title: "prac3_exercises.qmd"
+author: "Susan He"
+---
+
+```{r}
+set.seed(42)
+```
+```{r}
+for (i in seq_len(20)) {
+  ic <- i^3
+  print(ic)
+}
+```
+```{r}
+for(i in seq_len(5)){
+  ir <- paste(sample(letters, 5, replace = TRUE), collapse="")
+  print(ir)
+}
+```
+```{r}
+library(cowsay)
+species <- c("stegosaurus", "snowman", "dragon","whale")
+
+for (spp in species) {
+  say(paste("I am a", spp), by = spp)
+}
+```
+
+```{r}
+library(tidyverse)
+library(gt)
+species <- c("monkey", "shark", "turkey", "snowman")
+species_df <- tibble()
+
+for (spp in species) {
+  has_s <- startsWith(spp, "s")
+  current_row <- tibble(
+    Species = spp,
+    Starts_with_S = has_s
+  )
+  species_df <- species_df |> bind_rows(current_row)
+}
+gt(species_df)
+```
+
+```{r}
+library(tidyverse)
+library(gt)
+set.seed(42)
+breakfast <- c("eggs", "buns", "corn", "toast", "porridges","yoghurt","cereal","dumpling","sweet potatoes","cake")
+
+for(i in seq_len(10)) {
+  item<-print(sample(breakfast, size = 1))
+  count<-print(sample(1:5, size=1))
+  combine <- tibble(
+  item=item,
+  count=count
+)
+  breakfasttable <- bind_rows(breakfasttable,combine)
+}
+gt(breakfasttable)
+```
+
